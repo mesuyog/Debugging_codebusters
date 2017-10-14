@@ -49,7 +49,8 @@ public class Game {
 		if (matches > 0) {	
 			// Player should have his bet returned here because he wins
  			System.out.println("----GAME.JAVA: Player wins, his bet of " + bet + " should be returned to his balance here!");
-			
+			// The bellow method is called so that the bet amount can be added back to the player's balance on winning
+			player.receiveBetReturned(bet);
 			player.receiveWinnings(winnings);
 			
 			System.out.println("----GAME.JAVA: Player received winnings of " + winnings);
