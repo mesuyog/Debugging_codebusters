@@ -29,8 +29,12 @@ public class Game {
 		if (pick == null) throw new IllegalArgumentException("Pick cannot be negative.");
 		if (bet < 0) throw new IllegalArgumentException("Bet cannot be negative.");
 		
+		// Suyog Rajbhandari - code added to test incorrect balance increase bug
+ 		System.out.println("----GAME.JAVA: Balance before betting an amount of " + bet + ": " + player.getBalance());
+		
 		player.takeBet(bet);
-		    
+		// Detection of bug1
+		System.out.println("----GAME.JAVA: Balance after betting "+ bet + ": " + player.getBalance());     
 		int matches = 0;
 		for ( Dice d : dice) {
 			d.roll();
@@ -38,7 +42,8 @@ public class Game {
 				matches += 1;
 			}
 		}
-		
+		// Detection of Bug1
+		System.out.println("----GAME.JAVA: number of match: " + matches);
 		int winnings = matches * bet;
 
 		if (matches > 0) {			
