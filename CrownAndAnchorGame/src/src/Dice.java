@@ -10,7 +10,8 @@ public class Dice {
 		return value;
 	}
 
-	public DiceValue roll() {
+	public DiceValue roll() {		
+ 		// This should modify the current DiceValue before returning it
 		return DiceValue.getRandom();
 	}		
 	
