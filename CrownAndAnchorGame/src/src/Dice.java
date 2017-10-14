@@ -13,6 +13,7 @@ public class Dice {
 	public DiceValue roll() {		
  		// This should modify the current DiceValue before returning it
 		return DiceValue.getRandom();
+		value = DiceValue.getRandom();
 	}		
 	
 	public String toString() {
