@@ -27,6 +27,8 @@ public class Player {
 	}
 	
 	public boolean balanceExceedsLimitBy(int amount) {
+		// The balance only exceeds limit by the bet if the bet amount is greater than the balance
+ 		// The method should return true if the bet amount equals to the remaining balance
 		return (balance - amount > limit);
 	}
 	
@@ -53,14 +55,15 @@ public class Player {
 		return String.format("Player: %s, Balance: %d, Limit: %d", name, balance, limit);
 	}
 	/*
- +	 * Author: Suyog Rajbhandari
- +	 
- +	 * This method created aims to return the bet value to the player in case he wins a game
- +	 * */
- +	public void receiveBetReturned(int bet) {
- +		balance = balance + bet;
- +		System.out.println("----Player.java: bet of " + bet + " has been returned to " + this.getName() + ". Now he has: " + balance);
- +		
- +	}
+ 	 * Author: Suyog Rajbhandari
+ 	 
+ 	 * This method created aims to return the bet value to the player in case he wins a game
+ 	 * */
+ 	public void receiveBetReturned(int bet) {
+ 		balance = balance + bet;
+ 		System.out.println("----Player.java: bet of " + bet + " has been returned to " + this.getName() + ". Now he has: " + balance);
+ 		//System.out.println("----Player.java: bet of " + bet + " has been returned to " + this.getName() + ". Now he has: " + balance);
+ 		
+ 	}
   }
 }
